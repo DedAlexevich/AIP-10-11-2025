@@ -50,33 +50,6 @@ void deleting(int** mat, size_t created)
   delete[] mat;
 }
 
-int getDet(const int* a, size_t s)
-{
-  if (!s) {
-    return 0;
-  } else if (s == 1) {
-    return a[0];
-  }
-  else if (s == 2) {
-    return a[0]*a[3] - a[1]*a[2];
-  }
-  int* m = new int[(s-1)*(s-1)];
-  for (size_t i = 0; i < s; ++i) {
-    for (size_t j = 0; j < s; ++j) {
-      //Опорный элемент
-      // Матрицу для минора делаем
-      // Заполнить минор
-      // посчитать определитель
-      // Найти алгебраическое
-      // умножить алгеброическое на опорный
-      // просуммировать все
-
-    }
-  }
-
-}
-
-
 int** concat_rows(const int* const* lhs, size_t n1, size_t m1,
 const int* const* rhs, size_t n2, size_t m2)
 {
