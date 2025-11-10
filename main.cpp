@@ -106,6 +106,11 @@ int main()
   // deleting(a, 2);
   // deleting(b, 3);
   // deleting(n, 3);
+  int arr[] = {1,2,3,4,
+               5,6,7,8,
+               235, 53,32,12,
+               3, -12, 44, 8};
+  std::cout << det(arr,4);
 
 }
 
@@ -160,7 +165,7 @@ int det(const int * a, size_t n)
     for (size_t j = 1; j < n; ++j) {
       for (size_t k = 0; k < n; ++k) {
         if (k != i) {
-          minor[count] = (i + j) * n + k;
+          minor[count] = a[j * n + k];
           ++count;
         }
       }
